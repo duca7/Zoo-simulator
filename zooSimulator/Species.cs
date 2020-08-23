@@ -6,14 +6,14 @@ namespace zooSimulator
 {
     public abstract class Species
     {
-        private string id;
-        private string name;
-        private double heath;
-        private double length;
-        private double weight;
-        private GenderType gender;
-        private int age;
-        private int breedingPriod;
+        protected string id;
+        protected string name;
+        protected double heath;
+        protected double length;
+        protected double weight;
+        protected GenderType gender;
+        protected int age;
+        protected int breedingPriod;
 
         protected string Id { get => id; set => id = value; }
         protected string Name { get => name; set => name = value; }
@@ -24,6 +24,11 @@ namespace zooSimulator
         protected int Age { get => age; set => age = value; }
         protected int BreedingPriod { get => breedingPriod; set => breedingPriod = value; }
 
+
+        public abstract void Breed(Environment ev);
+        public abstract void Die(Environment ev);
     
     }
+
+   
 }
