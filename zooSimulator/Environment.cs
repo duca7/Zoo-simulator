@@ -43,6 +43,11 @@ namespace zooSimulator
 
         }
 
+        public void Spawn<T>(int quantity) where T : Species, new()
+        {
+            
+        }
+
 
 
     }
